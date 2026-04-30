@@ -1,19 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AP Lang DH: TVA and Tennessee</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>TVA's Effects on Tennessee</h1>
-      <p>AP Language Digital Humanities Project</p>
-      <p>By: Dominick Pelaia, Jamar Looney, Sam Hutapea, and Kyle Harper</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main>
+  <!-- The title that appears on the browser tab -->
+  <title>AP Lang DH: TVA and Tennessee</title>
+
+  <!-- Linking the external CSS file that controls all styling -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Main layout wrapper: splits the screen into left and right sections -->
+  <div class="layout">
+
+    <!-- LEFT PANEL: holds the TVA logo, title, credits, and course tag -->
+    <aside class="left-panel">
+
+      <!-- TVA logo image (you must place tva-logo.png in your project folder) -->
+      <img src="tva-logo.png" alt="TVA Logo" class="tva-logo" />
+
+      <!-- Main title of the slide/page -->
+      <h1 class="title">Guide To Tennessee Valley Authority</h1>
+
+      <!-- Credits for designers and researchers -->
+      <p class="credits">
+        Designed By: Jamar Looney & Dominick Pelaia<br>
+        Researched By: Kyle Harper & Samuel Hutapea
+      </p>
+
+      <!-- Black AP Lang label at the bottom of the left panel -->
+      <p class="course-tag">AP LANGUAGE & COMPOSITION</p>
+    </aside>
+
+    <!-- RIGHT PANEL: holds the overview card and buttons -->
+    <main class="right-panel">
+
+      <!-- Card-style container for the overview text -->
+      <section class="overview-card">
+
+        <!-- Section title -->
+        <h2>Overview</h2>
+
+        <!-- Main descriptive paragraph -->
+        <p>
+          The Tennessee Valley Authority (TVA) is a federally owned corporation that serves as the nation’s largest public power provider. Founded in 1933 as part of the New Deal, it was designed to modernize the Tennessee Valley through electricity, flood control, and economic development.
+        </p>
+
+        <!-- Row of buttons at the bottom of the card -->
+        <div class="button-row">
+          <button class="primary-btn">Research Process</button>
+          <button class="secondary-btn">Insert Other</button>
+        </div>
+
+      </section>
     </main>
-  </body>
+
+  </div>
+</body>
 </html>
