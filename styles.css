@@ -1,114 +1,116 @@
-/* Root variables: lets you change colors in one place */
 :root {
-  --bg: #f4f7f3;        /* Light background color */
-  --surface: #ffffff;   /* Card and panel background color */
-  --text: #142013;      /* Main text color */
-  --accent: #1f6f43;    /* Green accent color used for buttons and headers */
+  --bg: #f4f7f3;
+  --surface: #ffffff;
+  --text: #142013;
+  --accent: #1f6f43;
 }
 
-/* Base styling for the whole page */
 body {
-  margin: 0;                          /* Removes default browser margin */
-  font-family: "Inter", sans-serif;   /* Clean modern font */
-  background: var(--bg);              /* Sets background color */
-  color: var(--text);                 /* Sets default text color */
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Grid layout: left panel (35%) and right panel (65%) */
 .layout {
-  display: grid;                      /* Enables grid layout */
-  grid-template-columns: 35% 65%;     /* Defines the two-column split */
-  height: 100vh;                      /* Makes layout fill the full screen height */
+  display: grid;
+  grid-template-columns: 35% 65%;
+  flex: 1;
 }
 
-/* LEFT PANEL STYLING */
 .left-panel {
-  background: var(--surface);         /* White background */
-  padding: 2rem;                      /* Space inside the panel */
-  display: flex;                      /* Allows vertical stacking */
-  flex-direction: column;             /* Stacks items top-to-bottom */
-  align-items: flex-start;            /* Aligns items to the left */
-  border-right: 3px solid var(--accent); /* Green divider line */
+  background: var(--surface);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 3px solid var(--accent);
 }
 
-/* TVA logo size */
 .tva-logo {
-  width: 160px;                       /* Controls logo width */
-  margin-bottom: 1.5rem;              /* Space below the logo */
+  width: 160px;
+  margin-bottom: 1.5rem;
 }
 
-/* Main title styling */
 .title {
-  font-size: 2rem;                    /* Large title text */
-  font-weight: 700;                   /* Bold */
-  margin-bottom: 1rem;                /* Space below title */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-/* Credits text styling */
 .credits {
-  font-size: 0.95rem;                 /* Slightly smaller text */
-  line-height: 1.4;                   /* More readable spacing */
-  margin-bottom: 2rem;                /* Space below credits */
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
 }
 
-/* AP Lang tag at the bottom */
 .course-tag {
-  background: var(--text);            /* Dark background */
-  color: white;                       /* White text */
-  padding: 0.5rem 1rem;               /* Inner spacing */
-  font-size: 0.85rem;                 /* Smaller label text */
-  border-radius: 4px;                 /* Slightly rounded corners */
-  margin-top: auto;                   /* Pushes it to the bottom */
+  background: var(--text);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-top: auto;
 }
 
-/* RIGHT PANEL STYLING */
 .right-panel {
-  padding: 3rem;                      /* Space around content */
-  display: flex;                      /* Centers the card */
-  justify-content: center;            /* Horizontal centering */
-  align-items: flex-start;            /* Aligns card to the top */
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* Overview card styling */
 .overview-card {
-  background: var(--surface);         /* White card background */
-  padding: 2rem;                      /* Inner spacing */
-  border-radius: 12px;                /* Rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft shadow */
-  max-width: 600px;                   /* Prevents card from getting too wide */
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
 }
 
-/* Overview title styling */
 .overview-card h2 {
-  color: var(--accent);               /* Green header text */
-  margin-bottom: 1rem;                /* Space below header */
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
-/* Button row layout */
 .button-row {
-  margin-top: 1.5rem;                 /* Space above buttons */
-  display: flex;                      /* Places buttons side-by-side */
-  gap: 1rem;                          /* Space between buttons */
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
 }
 
-/* Base button styling */
-.primary-btn,
-.secondary-btn {
-  padding: 0.7rem 1.2rem;             /* Button size */
-  border-radius: 6px;                 /* Rounded corners */
-  border: none;                       /* Removes default border */
-  cursor: pointer;                    /* Makes cursor a pointer */
-  font-weight: 600;                   /* Bold text */
+.primary-btn, .secondary-btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-/* Green button */
 .primary-btn {
-  background: var(--accent);          /* Green background */
-  color: white;                       /* White text */
+  background: var(--accent);
+  color: white;
 }
 
-/* Light gray button */
 .secondary-btn {
-  background: #dfe6dd;                /* Light gray background */
-  color: var(--text);                 /* Dark text */
+  background: #dfe6dd;
+  color: var(--text);
+}
+
+.footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--text);
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 1.5;
 }
