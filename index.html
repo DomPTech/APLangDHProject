@@ -1,31 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AP Lang DH: TVA and Tennessee</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
-  <div class="layout">
-    <aside class="left-panel">
-      <h1 class="title">Guide To Tennessee Valley Authority</h1>
+  <div class="app-container">
+    <aside class="sidebar">
+      <img src="TVA.png" alt="TVA Logo" class="tva-logo">
+      <h1 class="sidebar-title">Guide To Tennessee Valley Authority</h1>
+      <p class="sidebar-overview">
+        The Tennessee Valley Authority (TVA) is a federally owned corporation created in 1933 to modernize the Tennessee Valley through electricity and flood control.
+      </p>
+      
+      <nav style="flex-grow: 1;">
+        <ul class="sidebar-nav">
+          <li><a class="sidebar-link active" data-section="hero">The Appalachian Town</a></li>
+          <li><a class="sidebar-link" data-section="landscape">The River's Edge</a></li>
+          <!-- Future links -->
+          <li><a class="sidebar-link" style="opacity: 0.2; pointer-events: none;">TVA Arrival (Coming Soon)</a></li>
+        </ul>
+      </nav>
+
       <button class="primary-btn" onclick="location.href='research.html';">Research Process</button>
     </aside>
-    <main class="right-panel">
-      <section class="overview-card">
-        <h2>Overview</h2>
-        <p>
-          The Tennessee Valley Authority (TVA) is a federally owned corporation that serves as the nation’s largest public power provider. Founded in 1933 as part of the New Deal, it was designed to modernize the Tennessee Valley through electricity, flood control, and economic development.
-        </p>
+
+    <main>
+      <!-- Section 1: The Appalachian Town (Pre-1933) -->
+      <section id="hero" class="section">
+        <div class="hero-content">
+          <p class="hero-subtitle">Era I: 1880 — 1932</p>
+          <h1 class="hero-title">The Appalachian Town</h1>
+          <p class="hero-description">
+            TODO: Description pre-1933
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Landscape Change (Placeholder for Slider) -->
+      <section id="landscape" class="section">
+        <div class="slider-placeholder" id="landscape-slider"></div>
+        <div class="hero-content" style="margin-top: 3rem;">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">TODO: Description landscape</h2>
+        </div>
       </section>
     </main>
-
   </div>
-
+  
   <footer class="footer">
     <p><strong>Created by:</strong> Dominick Pelaia, Jamar Looney | <strong>Researched by:</strong> Kyle Harper, Sam Hutapea for our AP Lang class</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
+
