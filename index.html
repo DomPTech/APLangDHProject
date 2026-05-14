@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AP Lang DH: TVA and Tennessee</title>
+
   <link rel="stylesheet" href="styles.css" />
+
   <!-- GSAP for animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -12,28 +14,52 @@
 </head>
 
 <body>
+
   <div class="app-container">
+
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-      <img src="TVA.png" alt="TVA Logo" class="tva-logo">
-      <h1 class="sidebar-title">Guide To Tennessee Valley Authority</h1>
-      <p class="sidebar-overview">
-        The Tennessee Valley Authority (TVA) is a federally owned corporation created in 1933 to modernize the Tennessee Valley through electricity and flood control.
-      </p>
-      
-      <nav style="flex-grow: 1;">
+      <img src="TVA.png" alt="TVA Logo" class="tva-logo" />
+
+      <header class="sidebar-header">
+        <h1 class="sidebar-title">Guide to the Tennessee Valley Authority</h1>
+        <p class="sidebar-overview">
+          The Tennessee Valley Authority (TVA), created in 1933, transformed the Tennessee Valley through electricity, flood control, and modernization.
+        </p>
+      </header>
+
+      <!-- NAVIGATION -->
+      <nav class="sidebar-nav-container">
         <ul class="sidebar-nav">
-          <li><a class="sidebar-link active" data-section="hero">The Appalachian Town</a></li>
-          <li><a class="sidebar-link" data-section="landscape">The River's Edge</a></li>
-          <!-- Future links -->
-          <li><a class="sidebar-link" style="opacity: 0.2; pointer-events: none;">TVA Arrival (Coming Soon)</a></li>
+          <li>
+            <a class="sidebar-link active" data-section="hero">
+              The Appalachian Town
+            </a>
+          </li>
+
+          <li>
+            <a class="sidebar-link" data-section="landscape">
+              The River's Edge
+            </a>
+          </li>
+
+          <li>
+            <a class="sidebar-link disabled">
+              TVA Arrival (Coming Soon)
+            </a>
+          </li>
         </ul>
       </nav>
 
-      <button class="primary-btn" onclick="location.href='research.html';">Research Process</button>
+      <button class="primary-btn" onclick="location.href='research.html'">
+        Research Process
+      </button>
     </aside>
 
-    <main>
-      <!-- Section 1: The Appalachian Town (Pre-1933) -->
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- SECTION 1 -->
       <section id="hero" class="section">
         <div class="hero-content">
           <p class="hero-subtitle">Era I: 1880 — 1932</p>
@@ -44,22 +70,26 @@
         </div>
       </section>
 
-      <!-- Section 2: Landscape Change (Placeholder for Slider) -->
+      <!-- SECTION 2 -->
       <section id="landscape" class="section">
-        <div class="slider-placeholder" id="landscape-slider"></div>
+        <div id="landscape-slider" class="slider-placeholder"></div>
+
         <div class="hero-content" style="margin-top: 3rem;">
-          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">TODO: Description landscape</h2>
+          <h2 class="section-title">TODO: Description landscape</h2>
         </div>
       </section>
+
     </main>
   </div>
-  
+
   <footer class="footer">
-    <p><strong>Created by:</strong> Dominick Pelaia, Jamar Looney | <strong>Researched by:</strong> Kyle Harper, Sam Hutapea for our AP Lang class</p>
+    <p>
+      <strong>Created by:</strong> Dominick Pelaia, Jamar Looney |
+      <strong>Researched by:</strong> Kyle Harper, Sam Hutapea  
+      — AP Language & Composition
+    </p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
-
