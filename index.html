@@ -1,10 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Process • TVA Project</title>
+  <title>AP Lang DH: TVA and Tennessee</title>
+
   <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
@@ -16,51 +21,66 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html" class="active">Research Process</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research.html">Research Process</a></li>
       <li><a href="sources.html">Sources</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
-  <div class="layout">
+  <div class="app-container">
 
-    <aside class="left-panel smooth-sticky">
+    <aside class="sidebar smooth-sticky">
+      <img src="TVA.png" alt="TVA Logo" class="tva-logo" />
+
       <header class="sidebar-header">
-        <h1 class="title">Research Process</h1>
-        <p class="credits">AP Lang DH: TVA and Tennessee</p>
-        <p class="course-tag">AP LANGUAGE & COMPOSITION</p>
+        <h1 class="sidebar-title">Guide to the Tennessee Valley Authority</h1>
+        <p class="sidebar-overview">
+          The Tennessee Valley Authority (TVA), created in 1933, transformed the Tennessee Valley through electricity, flood control, and modernization.
+        </p>
       </header>
 
-      <nav class="sidebar-nav">
-        <a class="sidebar-link active">Overview</a>
-        <a class="sidebar-link">Primary Sources</a>
-        <a class="sidebar-link">Digital Tools</a>
-        <a class="sidebar-link">Methodology</a>
+      <nav class="sidebar-nav-container">
+        <ul class="sidebar-nav">
+          <li><a class="sidebar-link active" data-section="hero">The Appalachian Town</a></li>
+          <li><a class="sidebar-link" data-section="landscape">The River's Edge</a></li>
+          <li><a class="sidebar-link disabled">TVA Arrival (Coming Soon)</a></li>
+        </ul>
       </nav>
+
+      <button class="primary-btn" onclick="location.href='research.html'">
+        Research Process
+      </button>
     </aside>
 
-    <main class="right-panel">
-      <section class="overview-card">
-        <h2>Our Process</h2>
+    <main class="main-content">
 
-        <p class="description">
-          This page outlines how Kyle Harper and Samuel Hutapea conducted their research on the Tennessee Valley Authority. It includes the primary sources, digital tools, and research strategies used throughout the project.
-        </p>
-
-        <p class="note">
-          (They will update this section in the shared Google Doc. Once finalized, it will be added here.)
-        </p>
-
-        <div class="button-row">
-          <button class="primary-btn" onclick="location.href='index.html'">
-            Back to Home
-          </button>
+      <section id="hero" class="section">
+        <div class="hero-content">
+          <p class="hero-subtitle">Era I: 1880 — 1932</p>
+          <h1 class="hero-title">The Appalachian Town</h1>
+          <p class="hero-description">TODO: Description pre-1933</p>
         </div>
       </section>
-    </main>
 
+      <section id="landscape" class="section">
+        <div id="landscape-slider" class="slider-placeholder"></div>
+
+        <div class="hero-content" style="margin-top: 3rem;">
+          <h2 class="section-title">TODO: Description landscape</h2>
+        </div>
+      </section>
+
+    </main>
   </div>
 
+  <footer class="footer">
+    <p>
+      <strong>Created by:</strong> Dominick Pelaia, Jamar Looney |
+      <strong>Researched by:</strong> Kyle Harper, Sam Hutapea — AP Language & Composition
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
