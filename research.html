@@ -1,262 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
-
-:root {
-  --sidebar-bg: #ffffff;
-  --sidebar-accent: #1f6f43;
-  --sidebar-text: #142013;
-
-  --era-bg: #f2ece0;
-  --era-text: #3c2f2f;
-  --era-accent: #8b5a2b;
-  --era-highlight: #d9c5b2;
-
-  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--era-bg);
-  color: var(--era-text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-
-.navbar {
-  width: 100%;
-  height: 70px;
-  background: #ffffff;
-  border-bottom: 3px solid var(--sidebar-accent);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.nav-logo {
-  height: 40px;
-}
-
-.nav-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--sidebar-text);
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-  color: var(--sidebar-accent);
-}
-
-
-.app-container,
-.layout {
-  display: grid;
-  grid-template-columns: 32% 68%;
-  min-height: 100vh;
-  margin-top: 70px; /* navbar height */
-}
-
-
-.sidebar,
-.left-panel {
-  background: var(--sidebar-bg);
-  border-right: 3px solid var(--sidebar-accent);
-  padding: 2.5rem;
-  height: calc(100vh - 70px);
-  position: sticky;
-  top: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.smooth-sticky {
-  transition: top 0.3s ease;
-}
-
-.tva-logo {
-  width: 140px;
-  margin-bottom: 2rem;
-}
-
-.sidebar-title,
-.title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.sidebar-overview {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  margin-bottom: 2.5rem;
-}
-
-.sidebar-nav,
-.sidebar-nav-container ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  margin-bottom: 3rem;
-}
-
-.sidebar-link {
-  text-decoration: none;
-  color: var(--sidebar-text);
-  font-size: 1rem;
-  font-weight: 600;
-  opacity: 0.6;
-  transition: var(--transition-smooth);
-  cursor: pointer;
-}
-
-.sidebar-link:hover,
-.sidebar-link.active {
-  opacity: 1;
-  color: var(--sidebar-accent);
-  transform: translateX(5px);
-}
-
-.primary-btn {
-  background: var(--sidebar-accent);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  margin-top: auto;
-}
-
-.primary-btn:hover {
-  background: var(--sidebar-text);
-  transform: translateY(-2px);
-}
-
-
-.main-content,
-.right-panel {
-  background: #fff;
-  padding: 4rem 3rem;
-  overflow-y: auto;
-}
-
-
-.section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  text-align: center;
-}
-
-.hero-subtitle {
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  opacity: 0.7;
-  font-weight: 600;
-}
-
-.hero-title {
-  font-size: clamp(3rem, 8vw, 5rem);
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  font-style: italic;
-  font-family: 'Playfair Display', serif;
-}
-
-
-.slider-placeholder {
-  width: 100%;
-  max-width: 1000px;
-  aspect-ratio: 16/9;
-  background: var(--era-highlight);
-  border: 1px solid var(--era-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.slider-placeholder::after {
-  content: "Landscape Change Slider Placeholder";
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  opacity: 0.5;
-}
-
-
-.overview-card {
-  background: #faf7f2;
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--era-accent);
-  max-width: 800px;
-}
-
-.button-row {
-  margin-top: 2rem;
-}
-
-
-footer {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: tan;
-  z-index: 10000;
-  height: 7vh;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Process • TVA Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="TVA.png" alt="TVA Logo" class="nav-logo" />
+      <span class="nav-title">TVA Project</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research Process</a></li>
+      <li><a href="sources.html">Sources</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div class="layout">
+    <aside class="left-panel">
+      <img src="TVA.png" alt="Tennessee Valley Authority Logo" class="tva-logo" />
+      <header class="sidebar-header">
+        <h1 class="title">Research Process</h1>
+        <p class="credits">AP Lang DH: TVA and Tennessee</p>
+        <p class="course-tag">AP LANGUAGE & COMPOSITION</p>
+      </header>
+    </aside>
+    <main class="right-panel">
+      <section class="overview-card">
+        <h2>Our Process</h2>
+        <p class="description">
+          This page outlines how Kyle Harper and Samuel Hutapea conducted their research on the Tennessee Valley Authority. It includes the primary sources, digital tools, and research strategies used throughout the project.
+        </p>
+        <p class="note">
+          (They will update this section in the shared Google Doc. Once finalized, it will be added here.)
+        </p>
+        <div class="button-row">
+          <button class="primary-btn" onclick="location.href='index.html'">
+            Back to Home
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

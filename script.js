@@ -1,30 +1,39 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Hero Entrance Animation
-  const heroTl = gsap.timeline();
-  
-  heroTl.from(".hero-subtitle", {
-    y: 20,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  })
-  .from(".hero-title", {
-    y: 30,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  }, "-=0.6")
-  .from(".hero-description", {
-    y: 20,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  }, "-=0.8");
 
-  // Navigation Logic
-  const sections = document.querySelectorAll(".section");
+
+  if (document.querySelector(".hero-title")) {
+    const heroTl = gsap.timeline();
+
+    heroTl
+      .from(".hero-subtitle", {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      })
+      .from(".hero-title", {
+        y: 30,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      }, "-=0.6")
+      .from(".hero-description", {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.8");
+  }
+
+
+  const pageSections = document.querySelectorAll(".section");
+
+  const researchSections = document.querySelectorAll(".overview-card");
+
+  const sections = pageSections.length > 0 ? pageSections : researchSections;
+
   const navLinks = document.querySelectorAll(".sidebar-link");
 
   sections.forEach((section, index) => {
@@ -44,15 +53,16 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Smooth Scroll for Sidebar Links
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       const targetId = link.getAttribute("data-section");
-      if (targetId) {
+      const target = document.getElementById(targetId);
+
+      if (target) {
         gsap.to(window, {
           duration: 1.2,
           scrollTo: {
-            y: `#${targetId}`,
+            y: target,
             autoKill: false
           },
           ease: "power4.inOut"
@@ -60,4 +70,5 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
 });
