@@ -11,6 +11,7 @@
   --era-highlight: #d9c5b2;
 
   --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --footer-height: 10vh;
 }
 
 * {
@@ -25,6 +26,7 @@ body {
   color: var(--era-text);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-bottom: var(--footer-height);
 }
 
 
@@ -198,6 +200,8 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
 #hero {
   text-align: center;
   background: radial-gradient(circle at center, #f9f5ef 0%, #f2ece0 100%);
@@ -297,9 +301,8 @@ footer {
   width: 100%;
   background: tan;
   z-index: 10000;
-  height: 7vh;
+  height: var(--footer-height);
   display: flex;
   align-items: center;
   justify-content: center;
-}
 }
