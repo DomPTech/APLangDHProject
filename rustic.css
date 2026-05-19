@@ -24,11 +24,19 @@ body.era-rustic .section {
 }
 
 body.era-rustic .impact-card,
-body.era-rustic .overview-card {
+body.era-rustic .overview-card,
+body.era-rustic .displacement-card {
   background: #faf7f2;
   border: 1px solid var(--era-accent);
+}
+
+body.era-rustic .quote-card {
+  background: var(--era-highlight);
+  border-left: 5px solid var(--era-accent);
+  color: var(--era-text);
 }
 
 body.era-rustic .sidebar {
   border-right-color: var(--sidebar-accent);
 }
+

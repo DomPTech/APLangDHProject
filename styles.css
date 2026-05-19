@@ -382,3 +382,39 @@ footer {
   text-align: center;
   line-height: 1.4;
 }
+
+.displacement-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.quote-card {
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 6px;
+  position: relative;
+}
+
+.displacement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.displacement-card {
+  padding: 2rem;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.displacement-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.displacement-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

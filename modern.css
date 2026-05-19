@@ -26,11 +26,18 @@ body.era-modern .section {
 }
 
 body.era-modern .impact-card,
-body.era-modern .overview-card {
+body.era-modern .overview-card,
+body.era-modern .displacement-card {
   background: #ffffff;
   border: 1px solid #dee2e6;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   border-radius: 8px;
+}
+
+body.era-modern .quote-card {
+  background: var(--era-highlight);
+  border-left: 5px solid var(--era-accent);
+  color: var(--era-text);
 }
 
 body.era-modern .sidebar {
@@ -41,3 +48,4 @@ body.era-modern .hero-description,
 body.era-modern p {
   font-style: normal;
 }
+
