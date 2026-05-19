@@ -418,3 +418,27 @@ footer {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.impact-card {
+  padding: 2.5rem;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.impact-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.impact-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
