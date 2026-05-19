@@ -1,0 +1,34 @@
+/* rustic.css */
+body.era-rustic {
+  --era-bg: #f2ece0;
+  --era-text: #3c2f2f;
+  --era-accent: #8b5a2b;
+  --era-highlight: #d9c5b2;
+  --sidebar-bg: #ffffff;
+  --sidebar-accent: #1f6f43;
+  
+  font-family: 'Playfair Display', serif;
+}
+
+body.era-rustic h1, 
+body.era-rustic h2, 
+body.era-rustic h3, 
+body.era-rustic .hero-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--era-text);
+}
+
+body.era-rustic .section {
+  background-color: var(--era-bg);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+body.era-rustic .impact-card,
+body.era-rustic .overview-card {
+  background: #faf7f2;
+  border: 1px solid var(--era-accent);
+}
+
+body.era-rustic .sidebar {
+  border-right-color: var(--sidebar-accent);
+}

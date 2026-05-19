@@ -6,13 +6,15 @@
   <title>AP Lang DH: TVA and Tennessee</title>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="rustic.css" />
+  <link rel="stylesheet" href="modern.css" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 
-<body>
+<body class="era-rustic">
 
   <nav class="navbar">
     <div class="nav-left">
@@ -40,7 +42,7 @@
           <p class="hero-subtitle">Era I: 1880 — 1932</p>
           <h1 class="hero-title">The Appalachian Town</h1>
           <p class="hero-description">
-            Describe the pre‑TVA Appalachian lifestyle, economy, and challenges.
+            Before 1933, the Tennessee Valley was one of the poorest regions in the U.S. Residents faced chronic flooding, severe soil erosion, and isolation. Only ~3% of rural homes had electricity, keeping the area disconnected from the modernizing nation.
           </p>
         </div>
       </section>
@@ -48,12 +50,21 @@
       <!-- SECTION 2: LANDSCAPE CHANGE -->
       <section id="landscape" class="section">
         <h2 class="section-title">The River’s Edge</h2>
-
-        <div id="landscape-slider" class="slider-placeholder"></div>
-
-        <p class="hero-description" style="margin-top: 2rem;">
-          Explain how the Tennessee River shaped life before federal intervention.
+        
+        <p class="hero-description">
+          The unpredictable Tennessee River ravaged communities. In 1867, Chattanooga suffered its worst flood on record. Drag the slider below to see the dramatic difference TVA made.
         </p>
+
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="Neyland_and_downtown_aerial.jpeg" width="800" height="500" alt="Chattanooga Flood Before TVA" style="object-fit: cover;">
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="1-birds-eye-view-Knoxville-1886-tn1.jpg" width="800" height="500" alt="Norris Dam After TVA" style="object-fit: cover;">
+          </div>
+        </div>
+        <p class="image-caption">Birds eye view of Knoxville (1886): By H. Wellge (drawing), Beck &amp; Pauli (lithograph) - This map is available from the United States <a href="//commons.wikimedia.org/wiki/Library_of_Congress" title="Library of Congress">Library of Congress</a>'s <a rel="nofollow" class="external text" href="//www.loc.gov/rr/geogmap/">Geography &amp; Map Division</a>under the digital ID <a rel="nofollow" class="external text" href="https://hdl.loc.gov/loc.gmd/g3964k.pm009000">g3964k.pm009000</a>.This tag does not indicate the copyright status of the attached work. <span style="white-space:nowrap">A normal <a href="//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags" title="Special:MyLanguage/Commons:Copyright tags">copyright tag</a> is still required.</span> <span style="white-space:nowrap">See <a href="//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing" title="Special:MyLanguage/Commons:Licensing">Commons:Licensing</a>.</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=15566220">Link</a></p>
+        <p class="image-caption">Neyland and downtown aerial: <a href="//commons.wikimedia.org/w/index.php?title=User:Neomrbungle&amp;action=edit&amp;redlink=1" class="new" title="User:Neomrbungle (page does not exist)">Neomrbungle</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=22795993">Link</a></p>
       </section>
 
       <!-- SECTION 3: TVA ARRIVAL -->
@@ -61,12 +72,11 @@
         <h2 class="section-title">The Arrival of the TVA (1933)</h2>
 
         <p class="hero-description">
-          Discuss the New Deal, the creation of the TVA, and the immediate goals of the program.
+          Created on May 18, 1933 under FDR’s New Deal, the Tennessee Valley Authority was tasked with modernizing the valley. Its goals: flood control, generating electricity, and improving agriculture. The federal government sought to uplift the poverty-stricken Tennessee Valley by constructing a series of dams, creating jobs, and introducing modern farming techniques. The initiative represented an unprecedented intervention by the federal government in regional planning and economic development.
         </p>
 
-        <div class="image-placeholder">
-          <!-- OPTIONAL IMAGE -->
-          TVA Arrival Image Placeholder
+        <div class="map-container" style="margin-top: 2rem; width: 100%; max-width: 800px; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+          <iframe src="https://maps.google.com/maps?q=Tennessee+River&t=k&z=15&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 
@@ -75,14 +85,26 @@
         <h2 class="section-title">Impact on Tennessee</h2>
 
         <p class="hero-description">
-          Cover electricity access, job creation, dam construction, and modernization.
+          The TVA radically shifted the region's economic reliance from traditional industry to federal and technical sectors, ushering in an era of rapid modernization and economic diversification across the entire valley.
         </p>
 
         <div class="impact-grid">
-          <div class="impact-card">Electricity Expansion</div>
-          <div class="impact-card">Flood Control</div>
-          <div class="impact-card">Economic Growth</div>
-          <div class="impact-card">Agricultural Reform</div>
+          <div class="impact-card">
+            <h3>Electricity Expansion</h3>
+            <p>Hydropower modernized homes, brought factories to the region, and powered critical WWII sites like Oak Ridge and ALCOA. Electricity usage skyrocketed, transforming domestic life and enabling the rise of modern manufacturing hubs that drove the local economy for decades.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Flood Control</h3>
+            <p>20 new dams built between 1933–1953 created reservoirs that stored excess water, preventing catastrophic downstream flooding. This extensive network of dams turned the volatile river into a reliable asset, saving millions of dollars in potential flood damage and saving lives.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Economic Growth</h3>
+            <p>A 9-foot navigation channel lowered shipping costs and spurred industrial growth, fundamentally altering the job landscape. Inland ports thrived, and the availability of cheap, reliable power attracted major industries, establishing the region as a vital manufacturing center.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Agricultural Reform</h3>
+            <p>TVA promoted contour plowing and fertilizer research, stopping severe soil erosion and improving crop yields. Demonstration farms educated local farmers on sustainable practices, revitalizing the depleted soil and drastically improving the agricultural output of the valley.</p>
+          </div>
         </div>
       </section>
 
@@ -91,12 +113,13 @@
         <h2 class="section-title">Legacy of the TVA</h2>
 
         <p class="hero-description">
-          Summarize the long‑term effects of the TVA on Tennessee and the United States.
+          While the TVA brought unprecedented modernization, improved quality of life, and created vast recreational lakes, it came with trade-offs. Ecosystems were altered, and thousands of families and family cemeteries were permanently displaced.
         </p>
 
-        <div class="image-placeholder">
-          Legacy Image Placeholder
+        <div class="image-placeholder" style="margin-top: 2rem; display: flex; justify-content: center;">
+          <img src="TVAimage2.jpg.webp" alt="Norris Dam Construction" style="max-width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
         </div>
+        <p class="image-caption">(Binh Nguyen/Canary Media)</p>
       </section>
 
     </main>

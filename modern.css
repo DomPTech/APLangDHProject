@@ -1,0 +1,43 @@
+/* modern.css */
+body.era-modern {
+  --era-bg: #f8f9fa;
+  --era-text: #212529;
+  --era-accent: #0056b3;
+  --era-highlight: #e9ecef;
+  --sidebar-bg: #ffffff;
+  --sidebar-accent: #0056b3;
+  
+  font-family: 'Inter', sans-serif;
+}
+
+body.era-modern h1, 
+body.era-modern h2, 
+body.era-modern h3, 
+body.era-modern .hero-title {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+body.era-modern .section {
+  background-color: var(--era-bg);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+body.era-modern .impact-card,
+body.era-modern .overview-card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+body.era-modern .sidebar {
+  border-right-color: var(--sidebar-accent);
+}
+
+body.era-modern .hero-description,
+body.era-modern p {
+  font-style: normal;
+}
