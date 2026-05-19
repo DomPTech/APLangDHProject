@@ -64,19 +64,29 @@ function initComparisons() {
     compareImages(x[i]);
   }
   function compareImages(img) {
-    var slider, img, clicked = 0, w, h;
-    /* Get the width and height of the img element */
-    w = img.offsetWidth;
-    h = img.offsetHeight;
-    /* Set the width of the img element to 50%: */
-    img.style.width = (w / 2) + "px";
+    var slider, clicked = 0, w, h;
+    /* Use the parent container to compute sizes so it's responsive */
+    function recalc() {
+      w = img.parentElement.offsetWidth;
+      h = img.parentElement.offsetHeight;
+      
+      const allImgs = img.parentElement.querySelectorAll(".img-comp-img img");
+      allImgs.forEach(i => i.style.width = w + "px");
+
+      /* Set the width of the overlay img to 50% of container: */
+      img.style.width = (w / 2) + "px";
+      if (slider) slider.style.left = (w / 2) + "px";
+    }
+
     /* Create slider: */
     slider = document.createElement("DIV");
     slider.setAttribute("class", "img-comp-slider");
     /* Insert slider */
     img.parentElement.insertBefore(slider, img);
-    /* Position the slider in the middle: */
-    slider.style.left = (w / 2) + "px";
+    /* Initial calc and position the slider in the middle: */
+    recalc();
+    /* Recalculate on window resize so the slider stays centered */
+    window.addEventListener('resize', recalc);
     /* Execute a function when the mouse button is pressed: */
     slider.addEventListener("mousedown", slideReady);
     /* And another function when the mouse button is released: */
